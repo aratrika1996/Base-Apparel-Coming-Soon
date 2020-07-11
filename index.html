@@ -67,7 +67,7 @@
                 document.getElementById("error-text").style.visibility = "visible";
             }
             if (isValid == true) {
-                event.preventDefault();
+               email.classList.remove('invalid');
                 document.getElementById("error").style.visibility = "hidden";
                 document.getElementById("error-text").style.visibility = "hidden";
             }
