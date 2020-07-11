@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.background {
+    background-image: url("images/bg-pattern-desktop.svg");
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.left {
+    width: 60%;
+    height: 100vh;
+    position: absolute;
+}
+
+.right {
+    width: 40%;
+    height: 100vh;
+    position: absolute;
+    left: 60%;
+}
+
+.hero-desktop {
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-mobile {
+    display: none;
+}
+
+.logo {
+    height: 2.3rem;
+    padding: 3rem 7rem;
+}
+
+.container {
+    padding-left: 7rem;
+    padding-right: 19rem;
+}
+
+.heading {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin: 2rem 0;
+}
+
+.heading-main {
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+.heading-sub {
+    font-weight: 600;
+    color: hsl(0, 6%, 24%);
+}
+
+p {
+    font-size: .9rem;
+    font-weight: 400;
+    color: hsl(0, 36%, 70%);
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+.form {
+    display: block;
+    position: relative;
+}
+
+input {
+    width: 90%;
+    height: 1.1rem;
+    padding: .7rem 1.5rem;
+    font-size: .8rem;
+    position: absolute;
+    border-radius: 50px;
+    border: solid 1px hsla(0, 36%, 70%, 0.61);
+    background-color: transparent;
+}
+
+input::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsla(0, 36%, 70%, 0.61);
+}
+
+.invalid {
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+input:focus,
+.btn:focus {
+    outline: none;
+}
+
+.btn {
+    background-image: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    width: 20%;
+    padding: .76rem;
+    position: absolute;
+    right: -1rem;
+    border-width: 0px;
+    border-radius: 50px;
+}
+
+.btn:hover {
+    background-image: linear-gradient(to right, hsl(0, 65%, 89%), hsl(0, 63%, 79%));
+}
+
+.arrow {
+    height: 1rem;
+    margin: auto;
+}
+
+#error {
+    position: absolute;
+    right: 18%;
+    top: .5rem;
+    visibility: hidden;
+}
+
+#error-text {
+    position: absolute;
+    top: 3.5rem;
+    left: 1.5rem;
+    color: hsl(0, 93%, 68%);
+    visibility: hidden;
+}
+
+
+/* Mobile version */
+
+@media (max-width: 759px) {
+    .background {
+        height: 800px;
+    }
+    .left {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+    .hero-mobile {
+        display: block;
+        width: 100%;
+    }
+    .logo {
+        height: 1.5rem;
+        padding: 2rem 3rem;
+    }
+    .container {
+        padding: 0 2rem;
+    }
+    .text {
+        text-align: center;
+    }
+    p {
+        /* font-size: 1.5rem; */
+        margin: 0 0 2rem 0;
+    }
+    .heading {
+        font-size: 2.5rem;
+    }
+    input {
+        width: 80%;
+    }
+    .btn {
+        width: 18%;
+        right: 0;
+    }
+    #error {
+        right: 21%;
+    }
+}
